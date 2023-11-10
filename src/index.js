@@ -12,4 +12,29 @@ const slimSelect = new SlimSelect({
   select: refs.breedSelect,
 });
 
+async function onSelect() {
+  try {
+    const catId = refs.breedSelect.value;
+      const data = await fetchCatByBreed(catId);
+      console.log(data)
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function catsSeerch() {
+  try {
+      await fetchBreeds().then(breeds => {
+        const data = breeds.map(({ id, name }) => ({ value: id, text: name }));
+          console.log(data)
+          slimSelect.setData(Array.from(data));
+    });
+    refs.breedSelect.addEventListener('change', onSelect);
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+catsSeerch();
 
