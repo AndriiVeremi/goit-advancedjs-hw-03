@@ -37,17 +37,19 @@
     opacity: 0;
   }
 }
+
 .ss-hide {
   display: none !important;
 }
 .ss-main {
+  width: 300px;
   display: flex;
   flex-direction: row;
   position: relative;
   user-select: none;
   color: var(--ss-font-color);
   min-height: var(--ss-main-height);
-  width: 100%;
+  /* width: 100%; */
   padding: var(--ss-spacing-s);
   cursor: pointer;
   border: 1px solid var(--ss-border-color);
