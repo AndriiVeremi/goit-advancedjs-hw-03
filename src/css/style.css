@@ -39,8 +39,12 @@
 }
 
 body {
-  /* background-color: #8d8d8d; */
-/* background-image: url('img_girl.jpg') */
+  background-color: #8d8d8d;
+  /* background-color: #000;
+  background-image: url('../images/cat.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+ 
 }
 
 .error {
@@ -511,13 +515,15 @@ body {
 }
 
 .card {
+  min-width: 820px;
   display: flex;
   gap: 30px;
 }
 
 .img {
-  width: 800px;
   border-radius: 20px;
+  width: clamp(300px, 50%, 800px);
+  height: clamp(300px, 100%, 800px);
 }
 
 .info {
@@ -545,23 +551,23 @@ body {
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  border: 2px solid #FF3D00;
+  border: 2px solid #ff3d00;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
 
 .loader::after {
-  content: '';  
+  content: '';
   box-sizing: border-box;
   position: absolute;
   left: 4px;
   top: 4px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
-    
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -569,4 +575,4 @@ body {
   100% {
     transform: rotate(360deg);
   }
-} 
+}
