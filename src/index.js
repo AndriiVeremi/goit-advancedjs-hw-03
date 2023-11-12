@@ -20,7 +20,10 @@ async function onSelectCats() {
     const data = await fetchCatByBreed(catId);
     markupCats(data);
   } catch (error) {
-    console.log(error);
+     iziToast.show({
+       position: 'topRight',
+       message: 'Oops! Something went wrong! Try reloading the page!',
+     });
   }
   refs.loader.style.display = 'none';
 }
@@ -28,7 +31,7 @@ async function onSelectCats() {
 function markupCats(data) {
   const imgCats = data[0].url;
   const infoCats = data[0].breeds[0];
- const cat = `<div class="card">
+  const cat = `<div class="card">
   <img class="img" src="${imgCats}" alt="${infoCats.name}"/>
       <div class="info">
         <h2 class="name">${infoCats.name}</h2>
@@ -42,16 +45,20 @@ function markupCats(data) {
 
 async function searchCats() {
   try {
+    refs.loader.style.display = 'block';
     await fetchBreeds().then(breeds => {
-      refs.loader.style.display = 'block';
       const data = breeds.map(({ id, name }) => ({ value: id, text: name }));
       console.log(data);
       slimSelect.setData(Array.from(data));
     });
     refs.breedSelect.addEventListener('change', onSelectCats);
   } catch (error) {
-    console.log(error);
+    iziToast.show({
+      position: 'topRight',
+      message: 'Oops! Something went wrong! Try reloading the page!',
+    });
   }
+
   refs.loader.style.display = 'none';
 }
 

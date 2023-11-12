@@ -39,7 +39,12 @@
 }
 
 body {
-  background-color: #8d8d8d;
+  /* background-color: #8d8d8d; */
+/* background-image: url('img_girl.jpg') */
+}
+
+.error {
+  display: none;
 }
 
 .ss-hide {
@@ -496,10 +501,12 @@ body {
   background-color: var(--ss-highlight-color);
 } /*# sourceMappingURL=slimselect.css.map */
 
+.breed-select {
+  margin-bottom: 100px;
+}
+
 .cat-info {
   padding: 50px 100px;
-  /* display: block;
-  width: 1200px; */
   margin: 0 auto;
 }
 
@@ -511,6 +518,24 @@ body {
 .img {
   width: 800px;
   border-radius: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px dotted #000;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.name {
+  font-size: 30px;
+}
+
+.description,
+.temperament {
+  font-size: 18px;
 }
 
 .loader {
