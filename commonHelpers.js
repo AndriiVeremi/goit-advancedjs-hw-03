@@ -2,8 +2,8 @@ import{a as l,S as u,i as d}from"./assets/vendor-33682a3e.js";(function(){const 
   <img class="img" src="${r}" alt="${s.name}"/>
       <div class="info">
         <h2 class="name">${s.name}</h2>
-        <p><b class="description">Description:</b> ${s.description}</p>
-        <p><b class="temperament">Temperament:</b> ${s.temperament}</p>   
+        <p><span class="description">Description: </span> ${s.description}</p>
+        <p><span class="temperament">Temperament: </span> ${s.temperament}</p>   
        </div>
 </div>`;o.catInfo.innerHTML=c,a(o.catInfo,!0)}async function y(){try{await f().then(e=>{const r=e.map(({id:s,name:c})=>({value:s,text:c}));console.log(r),p.setData(Array.from(r))}),a(o.breedSelect,!0),o.breedSelect.addEventListener("change",h)}catch{d.show({position:"topRight",message:"Oops! Something went wrong! Try reloading the page!"})}a(o.loader,!1)}y();
 //# sourceMappingURL=commonHelpers.js.map
