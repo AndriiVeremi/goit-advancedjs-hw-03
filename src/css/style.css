@@ -122,6 +122,7 @@ body {
 .temperament {
   font-size: 18px;
   color: teal;
+  font-weight: 500;
 }
 
 .loader {
