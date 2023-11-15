@@ -46,7 +46,7 @@ body {
   background-size: cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
   body {
     margin-top: 150px;
     display: flex;
@@ -66,7 +66,7 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
   .cat-info {
   padding: 50px 10px;
 }
@@ -78,7 +78,7 @@ body {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
   .card {
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ body {
   height: clamp(300px, 100%, 800px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
   .img {
     border-radius: 20px;
     width: 480px;
@@ -107,9 +107,9 @@ body {
   border-radius: 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1020px) {
   .info {
-    width: 450px;
+    width: 480px;
   }
 }
 
