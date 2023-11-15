@@ -9,23 +9,31 @@ const refs = {
   loader: document.querySelector('.loader'),
 };
 
+function showElement(element, isVisible) {
+  element.classList.toggle('hidden', !isVisible);
+}
+
+showElement(refs.breedSelect, false);
+showElement(refs.loader, true);
+
 const slimSelect = new SlimSelect({
   select: refs.breedSelect,
 });
 
 async function onSelectCats() {
   try {
-    refs.loader.style.display = 'block';
+    showElement(refs.loader, true);
+    showElement(refs.catInfo, false);
     const catId = refs.breedSelect.value;
     const data = await fetchCatByBreed(catId);
     markupCats(data);
   } catch (error) {
-     iziToast.show({
-       position: 'topRight',
-       message: 'Oops! Something went wrong! Try reloading the page!',
-     });
+    iziToast.show({
+      position: 'topRight',
+      message: 'Oops! Something went wrong! Try reloading the page!',
+    });
   }
-  refs.loader.style.display = 'none';
+  showElement(refs.loader, false);
 }
 
 function markupCats(data) {
@@ -41,16 +49,17 @@ function markupCats(data) {
 </div>`;
 
   refs.catInfo.innerHTML = cat;
+  showElement(refs.catInfo, true);
 }
 
 async function searchCats() {
   try {
-    refs.loader.style.display = 'block';
     await fetchBreeds().then(breeds => {
       const data = breeds.map(({ id, name }) => ({ value: id, text: name }));
       console.log(data);
       slimSelect.setData(Array.from(data));
     });
+    showElement(refs.breedSelect, true);
     refs.breedSelect.addEventListener('change', onSelectCats);
   } catch (error) {
     iziToast.show({
@@ -58,8 +67,7 @@ async function searchCats() {
       message: 'Oops! Something went wrong! Try reloading the page!',
     });
   }
-
-  refs.loader.style.display = 'none';
+  showElement(refs.loader, false);
 }
 
 searchCats();

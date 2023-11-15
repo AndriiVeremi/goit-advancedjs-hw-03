@@ -47,6 +47,11 @@ body {
  
 }
 
+.loader.hidden,
+.breed-select.hidden {
+  display: none;
+}
+
 .error {
   display: none;
 }
@@ -549,7 +554,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   border: 2px solid #ff3d00;
   box-sizing: border-box;
@@ -566,6 +571,10 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+}
+
+p.loader {
+  margin-top: 150px;
 }
 
 @keyframes rotation {
