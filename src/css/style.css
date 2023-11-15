@@ -48,7 +48,8 @@ body {
 }
 
 .loader.hidden,
-.breed-select.hidden {
+.breed-select.hidden,
+.cat-info.hidden {
   display: none;
 }
 
