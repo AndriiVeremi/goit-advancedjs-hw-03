@@ -43,8 +43,8 @@ function markupCats(data) {
   <img class="img" src="${imgCats}" alt="${infoCats.name}"/>
       <div class="info">
         <h2 class="name">${infoCats.name}</h2>
-        <p><b class="description">Description:</b> ${infoCats.description}</p>
-        <p><b class="temperament">Temperament:</b> ${infoCats.temperament}</p>   
+        <p><span class="description">Description: </span> ${infoCats.description}</p>
+        <p><span class="temperament">Temperament: </span> ${infoCats.temperament}</p>   
        </div>
 </div>`;
 
