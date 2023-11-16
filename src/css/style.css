@@ -55,7 +55,7 @@ body {
   .container {
     width: 375px;
     margin: 0 auto;
-    height: 440px;
+    height: 418px;
     background-image: url('../images/cat.jpg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -82,19 +82,20 @@ body {
 }
 
 .cat-info {
-  padding: 50px 10px;
+  /* padding: 50px 10px; */
+  padding: 300px 10px 30px 10px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   .cat-info {
-    padding: 70px 10px;
+    padding: 400px 10px 30px 10px
   }
 }
 
 @media screen and (min-width: 1280px) {
   .cat-info {
-    padding: 70px 10px;
+    padding: 490px 10px 30px 10px;
   }
 }
 
