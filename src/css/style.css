@@ -109,6 +109,7 @@ body {
   .card {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -130,6 +131,7 @@ body {
 }
 
 .info {
+  height: 90%;
   width: 300px;
   background-color: #e1e1e1;
   display: flex;
@@ -142,14 +144,12 @@ body {
 @media screen and (min-width: 768px) {
   .info {
     width: 485px;
-    height: 100%;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .info {
     width: 600px;
-    height: 100%;
   }
 }
 
@@ -167,11 +167,11 @@ body {
 
 .loader {
   margin: 0 auto;
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   position: relative;
-  border: 2px solid #ff3d00;
+  border: 3px solid teal;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
@@ -182,7 +182,7 @@ body {
   position: absolute;
   left: 4px;
   top: 4px;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   width: 12px;
   height: 12px;
   border-radius: 50%;
