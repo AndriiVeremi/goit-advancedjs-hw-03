@@ -17,7 +17,7 @@
   --ss-border-radius: 4px;
 }
 
-/* @keyframes ss-valueIn {
+@keyframes ss-valueIn {
   0% {
     transform: scale(0);
     opacity: 0;
@@ -36,7 +36,7 @@
     transform: scale(0);
     opacity: 0;
   }
-} */
+}
 
 .animate__animated {
   text-align: center;
