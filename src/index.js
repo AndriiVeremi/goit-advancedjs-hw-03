@@ -7,11 +7,18 @@ const refs = {
   breedSelect: document.querySelector('.js-breed-select'),
   catInfo: document.querySelector('.cat-info'),
   loader: document.querySelector('.loader'),
+  title: document.querySelector('.animate__animated'),
 };
 
 function showElement(element, isVisible) {
   element.classList.toggle('hidden', !isVisible);
 }
+
+refs.title.classList.add('animate__animated', 'animate__zoomInDown');
+
+refs.title.addEventListener('animationend', () => {
+ searchCats();
+});
 
 showElement(refs.breedSelect, false);
 showElement(refs.loader, true);
@@ -70,4 +77,4 @@ async function searchCats() {
   showElement(refs.loader, false);
 }
 
-searchCats();
+// searchCats();
