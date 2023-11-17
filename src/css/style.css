@@ -66,7 +66,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    padding-top: 60px;
+    padding-top: 100px;
     min-height: 600px;
     background-size: cover;
   }
@@ -75,8 +75,8 @@ body {
 @media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
-    padding-top: 80px;
-    min-height: 750px;
+    padding-top: 160px;
+    min-height: 830px;
     background-size: cover;
   }
 }
@@ -89,13 +89,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .cat-info {
-    padding: 400px 10px 30px 10px
+    padding: 380px 10px 30px 10px
   }
 }
 
 @media screen and (min-width: 1280px) {
   .cat-info {
-    padding: 490px 10px 30px 10px;
+    padding: 510px 10px 30px 10px;
   }
 }
 
